@@ -1,0 +1,10 @@
+/* pages/acredit/acredit.wxss */
+.avatar{
+  width: 250rpx
+}
+.nick{
+text-align: center;
+}
+input{
+  border: 1px solid blue;
+}

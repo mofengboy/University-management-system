@@ -1,1 +1,13 @@
 /* pages/index/index.wxss */
+.avatar{
+  width: 250rpx
+}
+.nick{
+text-align: center;
+}
+.acredit{
+  margin-top: 200rpx;
+}
+.acredit button{
+  width: 350rpx;
+}

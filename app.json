@@ -1,6 +1,8 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/wait/wait",
+    "pages/index/index",
+    "pages/acredit/acredit"
   ],
   "window":{
     "backgroundTextStyle":"light",

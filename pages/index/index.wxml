@@ -1,2 +1,9 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class='container'>
+<view class='avatar'>
+<open-data type='userAvatarUrl'></open-data>
+</view>
+<view class='name'>
+<text>{{real_name}}</text>
+</view>
+</view>
