@@ -5,9 +5,15 @@
 .nick{
 text-align: center;
 }
-.acredit{
+.accredit{
   margin-top: 200rpx;
 }
-.acredit button{
+.accredit button{
   width: 350rpx;
+}
+.input_frame{
+  border: solid 1rpx blue;
+}
+.realName{
+   display: inline;
 }

@@ -6,24 +6,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    real_name:"真实姓名",
-    openID:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.openID = app.globalData.openID
-    // 获取真实姓名
-    wx.request({
-      url: 'http://college.netlab.sunan.me/login/index/real_name',
-      data: {
-        openID: this.data.openID
-      },
-      success: res => {
-        this.setData({
-         real_name : res.data
+    wx.login({
+      success:res=>{
+        wx.request({
+          url: 'http://college.netlab.sunan.me/login/isopenid/index',
+          method:'POST',
+          data:{
+            code:res.code
+          },
+          success:res=>{
+            if(res.data!= "NULL"){
+              wx.setStorage({
+                key: 'token',
+                data: res.data,
+              });
+              wx.redirectTo({
+                url: '/pages/main/main',
+              })
+            }
+          }
         })
       }
     })
@@ -76,6 +83,44 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  accredit:function(e){
+    wx.login({
+      success:res=>{
+        this.data.code = res.code;
+        wx.getUserInfo({
+          withCredentials:true,
+          success:res=>{
+            wx.request({
+              url: 'http://college.netlab.sunan.me/login/accredit/index',
+              method:'POST',
+              data:{
+                real_name:e.detail.value.realName,
+                phone_number:e.detail.value.phoneNumber,
+                dapartment:e.detail.value.department,
+                code:this.data.code,
+                encryptedData:res.encryptedData,
+                iv:res.iv,
+                rawData:res.rawData,
+                signature:res.signature
+
+              },
+              success:res=>{
+                wx.setStorage({
+                  key: 'token',
+                  data:res.data,
+                  success: res=>{
+                    wx.redirectTo({
+                      url: '/pages/main/main',
+                    })
+                  },
+                })
+              }
+            })
+          }
+        })
+      }
+    })
   }
 
 })

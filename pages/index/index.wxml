@@ -4,6 +4,26 @@
 <open-data type='userAvatarUrl'></open-data>
 </view>
 <view class='name'>
-<text>{{real_name}}</text>
+<open-data type='userNickName'></open-data>
 </view>
+<form bindsubmit='accredit'>
+<view class='message'>
+<view>
+<view>真实姓名：</view>
+<input name='realName' class='input_frame' focus='true'></input>
+</view>
+<view>
+<view>手机号：</view>
+<input name='phoneNumber' class='input_frame'></input>  
+</view> 
+<view>
+<view>所在部门：</view>
+<input name='department' class='input_frame'></input>
+</view>
+
+</view>
+<view class='accredit'>
+<button open-type='getUserInfo' form-type='submit'>登陆授权</button>
+</view>
+</form>
 </view>

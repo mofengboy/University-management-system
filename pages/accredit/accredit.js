@@ -1,4 +1,4 @@
-// pages/wait/wait.js
+// pages/accredit/accredit.js
 Page({
 
   /**
@@ -12,35 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getStorage({
-      key: 'token',
-      success: res => {
-        wx.request({
-          url: 'http://college.netlab.sunan.me/login/index/open_id',
-          method: 'POST',
-          data: {
-            token: res.data,
-          },
-          success: res => {
-            console.log(res.data);
-            if (res.data == "ture") {
-              wx.redirectTo({
-                url: '/pages/main/main',
-              })
-            } else {
-              wx.redirectTo({
-                url: '/pages/index/index',
-              })
-            }
-          }
-        })
-      },
-      fail: err => {
-        wx.redirectTo({
-          url: '/pages/index/index',
-        })
-      }
-    })
+
   },
 
   /**

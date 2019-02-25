@@ -2,7 +2,8 @@
   "pages":[
     "pages/wait/wait",
     "pages/index/index",
-    "pages/acredit/acredit"
+    "pages/accredit/accredit",
+    "pages/main/main"
   ],
   "window":{
     "backgroundTextStyle":"light",

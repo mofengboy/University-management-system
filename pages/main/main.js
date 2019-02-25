@@ -1,22 +1,18 @@
-// pages/acredit/acredit.js
-const app = getApp();
+// pages/main/main.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    real_name:'',
-    mobile:'',
-    openID:''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-    
+
   },
 
   /**
@@ -66,30 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  submitForm: function (e) {
-    this.data.openID = app.globalData.openID;
-    this.data.mobile = e.detail.value.mobile;
-    this.data.real_name = e.detail.value.realName;
-    wx.request({
-      url: 'http://college.netlab.sunan.me/login/accredit/index',
-      data: {
-        openID: this.data.openID,
-        real_name: this.data.real_name,
-        mobile: this.data.mobile,
-      },
-      success: res => {
-        if (res.data) {
-        wx.navigateTo({
-          url: '/pages/index/index',
-        })
-        } else {
-          console.log('提交失败！')
-        }
-      },
-      fail: err => {
-        console.log(err)
-      }
-    })
   }
 })
