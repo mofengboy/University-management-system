@@ -23,7 +23,7 @@ Page({
       key: 'token',
       success:res=>{
         wx.request({
-          url: 'http://college.netlab.sunan.me/user/info/basic',
+          url: 'https://college.netlab.sunan.me/user/info/basic',
           method: 'POST',
           data: {
             token:res.data

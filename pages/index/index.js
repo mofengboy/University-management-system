@@ -16,7 +16,7 @@ Page({
     wx.login({
       success:res=>{
         wx.request({
-          url: 'http://college.netlab.sunan.me/login/isopenid/index',
+          url: 'https://college.netlab.sunan.me/login/isopenid/index',
           method:'POST',
           data:{
             code:res.code
@@ -97,7 +97,7 @@ Page({
           withCredentials:true,
           success:res=>{
             wx.request({
-              url: 'http://college.netlab.sunan.me/login/accredit/index',
+              url: 'https://college.netlab.sunan.me/login/accredit/index',
               method:'POST',
               data:{
                 real_name:e.detail.value.realName,

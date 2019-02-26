@@ -16,7 +16,7 @@ Page({
       key: 'token',
       success: res => {
         wx.request({
-          url: 'http://college.netlab.sunan.me/login/index/open_id',
+          url: 'https://college.netlab.sunan.me/login/index/open_id',
           method: 'POST',
           data: {
             token: res.data,
