@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 <view class='container'>
-<text>欢迎！开始码代码吧</text>
+<text>欢迎{{real_name}}！ 开始码代码吧</text>
 <button>评分部分</button>
 <button>任务下达及通知部分</button>
 <button>受到任务确认部分</button>

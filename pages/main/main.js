@@ -5,21 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    real_name:'真实姓名'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.getStorage({
+      key: 'token',
+      success:res=>{
+        wx.request({
+          url: 'http://college.netlab.sunan.me/user/info/basic',
+          method: 'POST',
+          data: {
+            token:res.data
+          },
+          success:res=>{
+            this.setData({
+              real_name: res.data.real_name
+            })
+          }
+        })
+      },
+      fail:err=>{
+        console.log(err);
+      }
+    })
+    
   },
 
   /**

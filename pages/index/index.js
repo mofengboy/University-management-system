@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isExist:false
   },
 
   /**
@@ -28,6 +29,10 @@ Page({
               });
               wx.redirectTo({
                 url: '/pages/main/main',
+              })
+            }else{
+              this.setData({
+                isExist:true
               })
             }
           }
