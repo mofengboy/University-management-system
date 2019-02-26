@@ -12,7 +12,37 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        wx.request({
+          url: 'https://college.netlab.sunan.me/login/islogin/index',
+          method: 'POST',
+          data: {
+            token: res.data
+          },
+          success: res => {
+            if(res.data != "true"){
+              wx.redirectTo({
+                url: '/pages/index/index',
+              })
+            }
+          },
+          fail:err=>{
+            console.log(err);
+            wx.redirectTo({
+              url: '/pages/index/index',
+            })
+          }
+        })
+      },
+      fail: err => {
+        console.log(err);
+        wx.redirectTo({
+          url: '/pages/index/index',
+        })
+      }
+    })  
   },
 
   /**
