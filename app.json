@@ -1,13 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/wait/wait",
     "pages/index/index",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/check/check"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "高校数据管理系统",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

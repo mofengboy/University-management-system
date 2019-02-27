@@ -112,5 +112,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  check: function (event) {
+    wx.navigateTo({
+      url: '/pages/check/check',
+    })
   }
 })
