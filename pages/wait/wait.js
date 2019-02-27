@@ -22,7 +22,6 @@ Page({
             token: res.data,
           },
           success: res => {
-            console.log(res.data);
             if (res.data == "ture") {
               wx.redirectTo({
                 url: '/pages/main/main',
