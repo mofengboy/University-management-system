@@ -1,8 +1,8 @@
 <!--pages/main/main.wxml-->
 <view class='container'>
 <text>欢迎{{real_name}}！ 开始码代码吧</text>
-<button catchtap='check'>评分部分</button>
-<button>任务下达及通知部分</button>
-<button>受到任务确认部分</button>
-<button>数据汇总及历史信息查询部分</button>
+<van-button type= 'primary' catchtap='check'>评分部分</van-button>
+<van-button type= 'primary' catchtap='task'>任务下达及通知部分</van-button>
+<van-button type= 'primary' >受到任务确认部分</van-button>
+<van-button type= 'primary' >数据汇总及历史信息查询部分</van-button>
 </view>

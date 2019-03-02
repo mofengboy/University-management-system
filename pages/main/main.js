@@ -113,9 +113,15 @@ Page({
   onShareAppMessage: function () {
 
   },
+
   check: function (event) {
     wx.navigateTo({
       url: '/pages/check/check',
+    })
+  },
+  task:function(e){
+    wx.navigateTo({
+      url: '/pages/task/task',
     })
   }
 })

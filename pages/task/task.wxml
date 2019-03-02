@@ -1,0 +1,11 @@
+<!--pages/task/task.wxml-->
+<view>
+<view>
+<van-panel title="时间"status="当前时间：周{{current_time}}" use-footer-slot>
+  <view>
+  <text>选择时间</text>
+  <van-picker columns="{{columns}}" bind:change="onChange" />
+  </view>
+</van-panel>
+</view>
+</view>

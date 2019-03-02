@@ -1,0 +1,8 @@
+{
+"navigationBarTitleText": "分派任务",
+"usingComponents": {
+  "van-panel": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/panel/index",
+  "van-button": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/button/index",
+  "van-picker": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/picker/index"
+}
+}
