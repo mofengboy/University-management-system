@@ -1,8 +1,9 @@
 {
-  "pages": [
+  "pages":[
     "pages/wait/wait",
     "pages/index/index",
     "pages/main/main",
+    "pages/task/task",
     "pages/check/check"
   ],
   "window": {
