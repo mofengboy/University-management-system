@@ -2,10 +2,23 @@
 <view>
 <view>
 <van-panel title="时间"status="当前时间：周{{current_time}}" use-footer-slot>
-  <view>
-  <text>选择时间</text>
-  <van-picker columns="{{columns}}" bind:change="onChange" />
+  <view class='columns'>
+  <text>选择时间:</text>
+  <van-picker columns="{{columns}}"></van-picker>
+  </view>
+  <view class='columns'>
+  <text>选择人员</text>
+  <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入人员名单"
+    bind:change="onChange"
+  />
+</van-cell-group>
   </view>
 </van-panel>
+</view>
+<view class=''>
+<van-button type="primary" size='large'>提交</van-button>
 </view>
 </view>

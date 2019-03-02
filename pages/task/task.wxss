@@ -1,1 +1,5 @@
 /* pages/task/task.wxss */
+.columns{
+  border:solid 2rpx blue;
+  background-color: pink
+}
