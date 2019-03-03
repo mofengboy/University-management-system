@@ -1,0 +1,17 @@
+<!--pages/history/history.wxml-->
+<view>
+<van-panel title="时间"status="当前时间：{{current_year}}年{{current_month}}月{{current_day}}日" use-footer-slot>
+<text>选择时间</text>
+<van-datetime-picker
+  type="date"
+  value="{{currentDate}}"
+  max-date="{{maxDate}}"
+/>
+</van-panel>
+<view>
+<text>选择宿舍楼</text>
+</view>
+<view>
+<text>选择宿舍</text>
+</view>
+</view>

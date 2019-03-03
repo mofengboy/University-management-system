@@ -123,5 +123,10 @@ Page({
     wx.navigateTo({
       url: '/pages/task/task',
     })
+  },
+  history:function(e){
+    wx.navigateTo({
+      url: '/pages/history/history',
+    })
   }
 })

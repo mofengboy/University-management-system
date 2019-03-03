@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/main/main",
     "pages/task/task",
+    "pages/history/history",
     "pages/check/check"
   ],
   "window": {

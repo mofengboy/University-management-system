@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "历史查询",
+  "usingComponents": {
+    "van-panel": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/panel/index",
+    "van-datetime-picker": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/datetime-picker/index"
+  }
+}
