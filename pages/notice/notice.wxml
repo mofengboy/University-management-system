@@ -1,2 +1,24 @@
 <!--pages/notice/notice.wxml-->
-<text>收到任务确认部分</text>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">任务日期</view>
+    <view class="th">任务时间</view>
+    <view class="th">任务详情及确认</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.date}}</view>
+      <view class="td">{{item.time}}</view>
+      <view class="td">
+      <button class='open' >查看</button>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.date}}</view>
+      <view class="td">{{item.time}}</view>
+      <view class="td">
+      <button class='open' >查看</button>
+      </view>
+    </view>
+  </block>
+</view>
