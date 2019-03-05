@@ -128,5 +128,10 @@ Page({
     wx.navigateTo({
       url: '/pages/history/history',
     })
+  },
+  notice:function(e){
+    wx.navigateTo({
+      url: '/pages/notice/notice',
+    })
   }
 })
