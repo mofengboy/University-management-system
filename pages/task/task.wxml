@@ -12,13 +12,12 @@
   <van-field
     value="{{ value }}"
     placeholder="请输入人员名单"
-    bind:change="onChange"
   />
 </van-cell-group>
   </view>
 </van-panel>
 </view>
-<view class=''>
+<view>
 <van-button type="primary" size='large'>提交</van-button>
 </view>
 </view>

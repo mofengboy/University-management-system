@@ -7,11 +7,26 @@
   value="{{currentDate}}"
   max-date="{{maxDate}}"
 />
-</van-panel>
 <view>
 <text>选择宿舍楼</text>
+ <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入宿舍楼号"
+  />
+</van-cell-group>
 </view>
 <view>
 <text>选择宿舍</text>
+ <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入宿舍号"
+  />
+</van-cell-group>
+</view>
+</van-panel>
+<view>
+<van-button type="primary" size='large'>提交</van-button>
 </view>
 </view>
