@@ -35,7 +35,7 @@
 
  </view>
 
-<button class='submit' bindtap="chooseimage">获取图片</button>
+<button class='submit' bindtap="chooseimage">拍摄图片</button>
 
 <image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
 

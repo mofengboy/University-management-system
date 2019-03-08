@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
@@ -72,5 +71,20 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad')
+  },
+  //标签导航
+  onChange: function (e) {
+    let jumpUrl = "/pages/main/main";
+    switch (e.detail) {
+      case 0: jumpUrl = "/pages/main/main";
+        break;
+      case 1: jumpUrl = "/pages/notice/notice";
+        break;
+      case 2: console.log(e.detail);
+        break;
+    }
+    wx.navigateTo({
+      url: jumpUrl,
+    })
   }
 })

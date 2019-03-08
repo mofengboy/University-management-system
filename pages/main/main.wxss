@@ -1,4 +1,11 @@
 /* pages/main/main.wxss */
-.container button{
-  margin: 25rpx 0 25rpx 0;
+button{
+  margin: 50rpx;
+  padding: 0;
+  border: 0;
+  width: 300rpx;
+  height: 100rpx;
+}
+.avatar{
+  width: 250rpx
 }

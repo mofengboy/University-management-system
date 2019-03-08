@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    real_name:'真实姓名'
+    real_name:'真实姓名',
   },
 
   /**
@@ -132,6 +132,20 @@ Page({
   notice:function(e){
     wx.navigateTo({
       url: '/pages/notice/notice',
+    })
+  },
+  onChange:function(e){
+    let jumpUrl = "/pages/main/main";
+    switch(e.detail){
+      case 0:jumpUrl = "/pages/main/main";
+      break;
+      case 1:jumpUrl = "/pages/notice/notice";
+      break;
+      case 2:console.log(e.detail);
+      break;
+    }
+    wx.navigateTo({
+      url: jumpUrl,
     })
   }
 })

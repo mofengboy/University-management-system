@@ -1,15 +1,17 @@
 <!--pages/main/main.wxml-->
 <view class='container'>
 <view>
-<van-tabbar>
+<van-tabbar active="0" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>
   <van-tabbar-item icon="friends-o" info="5">通知</van-tabbar-item>
   <van-tabbar-item icon="setting-o" info="20">个人中心</van-tabbar-item>
 </van-tabbar>
 </view>
-<text>欢迎{{real_name}}！ 开始码代码吧</text>
-<van-button type= 'primary' catchtap='check'>评分部分</van-button>
-<van-button type= 'primary' catchtap='task'>任务下达及通知部分</van-button>
-<van-button type= 'primary' catchtap='notice' >受到任务确认部分</van-button>
-<van-button type= 'primary' catchtap='history' >数据汇总及历史信息查询部分</van-button>
+<text>欢迎{{real_name}}！ 开始工作吧</text>
+<view class='avatar'>
+<open-data type='userAvatarUrl'></open-data>
+</view>
+<button type= 'primary' catchtap='check'>开始评分</button>
+<button type= 'primary' catchtap='task'>发布任务</button>
+<button type= 'primary' catchtap='history' >历史信息查询</button>
 </view>
