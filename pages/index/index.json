@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "主界面"
+  "navigationBarTitleText": "主界面",
+  "usingComponents":{
+      "van-field": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/field/index"
+  }
 }

@@ -1,4 +1,7 @@
 /* pages/index/index.wxss */
+.message{
+  margin-top: 50rpx
+}
 .avatar{
   width: 250rpx
 }

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isExist:false
+    isExist:false,
   },
 
   /**
@@ -90,6 +90,7 @@ Page({
 
   },
   accredit:function(e){
+    console.log(e);
     wx.login({
       success:res=>{
         this.data.code = res.code;
@@ -102,7 +103,6 @@ Page({
               data:{
                 real_name:e.detail.value.realName,
                 phone_number:e.detail.value.phoneNumber,
-                dapartment:e.detail.value.department,
                 code:this.data.code,
                 encryptedData:res.encryptedData,
                 iv:res.iv,
