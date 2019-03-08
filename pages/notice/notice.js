@@ -62,15 +62,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-  data: {
-    listData: [
-      {"date": "周一", "time": "11：00~12：00" },
-      {"date": "周二", "time": "11：00~12：00" },
-      {"date": "周三", "time": "11：00~12：00" }
-    ]
-  },
+  
   onLoad: function () {
     console.log('onLoad')
+  },
+  noticeview: function (e) {
+    wx.navigateTo({
+      url: '/pages/noticeview/noticeview',
+    })
   },
   //标签导航
   onChange: function (e) {
@@ -86,5 +85,40 @@ Page({
     wx.navigateTo({
       url: jumpUrl,
     })
+  },
+
+  data: {
+
+    showModal: false,
+    listData: [
+      { "date": "周一", "time": "11：00~12：00" },
+      { "date": "周二", "time": "11：00~12：00" },
+      { "date": "周三", "time": "11：00~12：00" }
+    ]
+  },
+
+
+
+  submit: function () {
+
+    this.setData({
+
+      showModal: true
+
+    })
+
+  },
+  preventTouchMove: function () {
+  },
+
+  go: function () {
+
+    this.setData({
+
+      showModal: false
+
+    })
+
   }
+
 })

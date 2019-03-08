@@ -7,6 +7,59 @@
   <van-tabbar-item icon="setting-o" info="20">个人中心</van-tabbar-item>
 </van-tabbar>
 </view>
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+ 
+
+<view class="modalDlg" wx:if="{{showModal}}">
+
+
+
+   <view class='row'>
+
+        <view class='info'>
+
+               <input  class= 'info-input1'  placeholder="宿舍楼号：" />
+
+         </view>
+
+ </view>
+
+ <view class='row'>
+
+        <view class='info'>
+
+               <input  class= 'info-input' placeholder="宿舍号：" />
+
+         </view>
+
+ 
+
+ </view>
+
+  <view class='row'>
+
+        <view class='info'>
+
+               <input class= 'info-input'  placeholder="检查时间：" />
+
+         </view>
+
+</view>
+
+  <view class='row'>
+
+        <view class='info'>
+
+               <input class= 'info-input'  placeholder="检查细则：" />
+
+         </view>
+
+    
+</view>
+<button bindtap="go" class='submit'>确认</button>
+</view>
 <view class="table">
   <view class="tr bg-w">
     <view class="th">任务日期</view>
@@ -18,14 +71,14 @@
       <view class="td">{{item.date}}</view>
       <view class="td">{{item.time}}</view>
       <view class="td">
-      <button class='open' >查看</button>
+      <button class='open' bindtap="submit" >查看</button>
       </view>
     </view>
     <view class="tr" wx:else>
       <view class="td">{{item.date}}</view>
       <view class="td">{{item.time}}</view>
       <view class="td">
-      <button class='open' >查看</button>
+      <button class='open' bindtap="submit" >查看</button>
       </view>
     </view>
   </block>
