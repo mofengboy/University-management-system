@@ -1,10 +1,11 @@
-// pages/notice/notice.js
+// pages/personal/personal.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
   },
 
   /**
@@ -55,23 +56,6 @@ Page({
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  
-  onLoad: function () {
-    console.log('onLoad')
-  },
-  noticeview: function (e) {
-    wx.navigateTo({
-      url: '/pages/noticeview/noticeview',
-    })
-  },
-  //标签导航
   onChange: function (e) {
     let jumpUrl = "/pages/main/main";
     switch (e.detail) {
@@ -87,38 +71,42 @@ Page({
     })
   },
 
-  data: {
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
 
-    showModal: false,
-    listData: [
-      { "date": "周一", "time": "11：00~12：00" },
-      { "date": "周二", "time": "11：00~12：00" },
-      { "date": "周三", "time": "11：00~12：00" }
-    ]
   },
+  getStorag: function () { // 获取本地存储信息
+    var data = wx.getStorageSync("login");
+    return {
+      sdk: data.sdk,
+      uid: data.uid
+    }
+  },
+  quitFn: function () {    // 退出登陆
+    Utils.removeStorage("Reset");
+    var res = this.getStorag();
+    Utils.requestFn({
+      url: 'https://college.netlab.sunan.me/login/isopenid/index',
+      method: "POST",
+      data: {
+        sdk: res.sdk,
+        uid: res.uid
+      },
+      success: function (res) {
+        if (res.data.status) {
+          wx.reLaunch({
+            url: '/pages/index/index'
+          })
+          Utils.removeStorage("login");
 
-
-
-  submit: function () {
-
-    this.setData({
-
-      showModal: true
-
+        } else {
+          Utils.reLaunch(res.data.message, "/pages/index/index");
+          Utils.removeStorage("login");
+        }
+        return false;
+      }
     })
-
-  },
-  preventTouchMove: function () {
-  },
-
-  go: function () {
-
-    this.setData({
-
-      showModal: false
-
-    })
-
   }
-
 })

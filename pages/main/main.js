@@ -141,7 +141,7 @@ Page({
       break;
       case 1:jumpUrl = "/pages/notice/notice";
       break;
-      case 2:console.log(e.detail);
+      case 2: jumpUrl = "/pages/personal/personal";
       break;
     }
     wx.navigateTo({

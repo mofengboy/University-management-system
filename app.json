@@ -6,7 +6,8 @@
     "pages/task/task",
     "pages/history/history",
     "pages/notice/notice",
-    "pages/check/check"
+    "pages/check/check",
+    "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",

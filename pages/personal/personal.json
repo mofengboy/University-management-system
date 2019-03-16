@@ -1,0 +1,7 @@
+{
+ "navigationBarTitleText": "个人中心",
+"usingComponents": {
+  "van-tabbar": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/tabbar/index",
+  "van-tabbar-item": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/tabbar-item/index"
+}
+}
