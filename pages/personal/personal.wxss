@@ -9,11 +9,11 @@
          border-bottom: 1rpx solid #e8e8e8;
 }
 .setup-list navigator text{
-        font-size: 30rpx;
+        font-size: 35rpx;
 }
 .setup-list navigator image{
-        height: 35rpx;
-        width: 35rpx;
+        height: 45rpx;
+        width: 45rpx;
 }
 .quit {
       padding: 30rpx ;
@@ -23,7 +23,7 @@
         padding: 18rpx 0;
         background-color: rgba(217, 42, 42, 1);
         display: flex;
-        font-size: 30rpx;
+        font-size: 35rpx;
         color: #fff;
         align-items: center;
         justify-content: center;

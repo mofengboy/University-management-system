@@ -7,11 +7,8 @@
   <van-tabbar-item icon="setting-o" info="20">个人中心</van-tabbar-item>
 </van-tabbar>
 </view>
-<text>欢迎{{real_name}}！ 开始工作吧</text>
-<view class='avatar'>
-<open-data type='userAvatarUrl'></open-data>
-</view>
-<button type= 'primary' catchtap='check'>开始评分</button>
-<button type= 'primary' catchtap='task'>发布任务</button>
-<button type= 'primary' catchtap='history' >历史信息查询</button>
+<image></image>
+<button class="myButton" type= 'primary' catchtap='check'>开始评分</button>
+<button class="myButton" type= 'primary' catchtap='task'>发布任务</button>
+<button class="myButton" type= 'primary' catchtap='history' >历史信息查询</button>
 </view>

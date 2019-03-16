@@ -10,19 +10,19 @@
 <view  class="setup-list">
         <navigator url='/pages/modifyPasd/modifyPasd'>
                 <text>换绑手机</text>
-                <image src='/images/b.png'></image>
+                <image src='/images/sort.png'></image>
         </navigator>
          <navigator url="/pages/static/feedback/feedback">
                 <text>意见反馈</text>
-                <image src='/images/b.png'></image>
+                <image src='/images/timeline.png'></image>
         </navigator>
          <navigator url='/pages/aboutList/aboutList'>
                 <text>关于</text>
-                <image src='/images/b.png'></image>
+                <image src='/images/comment.png'></image>
         </navigator>
          <navigator  url='/pages/static/Help/Help'>
                 <text>帮助</text>
-                <image src='/images/b.png'></image>
+                <image src='/images/teacher.png'></image>
         </navigator>
         <view class='quit' bindtap='quitFn'><text>退出登陆</text></view>
 </view>
