@@ -7,22 +7,42 @@
   <van-tabbar-item icon="setting-o" info="20">个人中心</van-tabbar-item>
 </van-tabbar>
 </view>
+
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{userInfo.userName == null}}">
+      <image class="userinfo-avatar" src="{{userInfo.userFigure}}" background-size="cover" ></image>
+      <view class='user-name'>
+        <text class="userinfo-nickname">未设置</text>
+        <image class='edit-pic' bindtap='toMyUserInfo' src='/images/icon/edit.png'></image>
+      </view>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.userFigure}}" background-size="cover" ></image>
+      <view class='user-name'>
+        <text class="userinfo-nickname">{{userInfo.userName}}</text>
+        <image class='edit-pic' bindtap='toMyUserInfo' src='/images/icon/edit.png'></image>
+      </view>
+    </block>
+  </view>
+</view>
+
 <view  class="setup-list">
         <navigator url='/pages/modifyPasd/modifyPasd'>
                 <text>换绑手机</text>
-                <image src='/images/sort.png'></image>
+                <image src='/images/icon/sort.png'></image>
         </navigator>
-         <navigator url="/pages/static/feedback/feedback">
+         <navigator url="/pages/feedback/feedback">
                 <text>意见反馈</text>
-                <image src='/images/timeline.png'></image>
+                <image src='/images/icon/timeline.png'></image>
         </navigator>
-         <navigator url='/pages/aboutList/aboutList'>
+         <navigator url='/pages/about/about'>
                 <text>关于</text>
-                <image src='/images/comment.png'></image>
+                <image src='/images/icon/comment.png'></image>
         </navigator>
-         <navigator  url='/pages/static/Help/Help'>
+         <navigator  url='/pages/help/help'>
                 <text>帮助</text>
-                <image src='/images/teacher.png'></image>
+                <image src='/images/icon/teacher.png'></image>
         </navigator>
         <view class='quit' bindtap='quitFn'><text>退出登陆</text></view>
 </view>

@@ -1,0 +1,14 @@
+<!--pages/help.wxml-->
+<view class='bt-about'>
+  <view class='text-title'>功能简介</view>
+  <view class='text-content'></view>
+
+  <view class='text-title'>开发者信息</view>
+  <view class='text-content'>
+    
+  </view>
+
+
+  <view class='text-title'>版本信息</view>
+ 
+</view>

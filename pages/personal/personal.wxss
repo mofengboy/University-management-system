@@ -29,3 +29,46 @@
         justify-content: center;
         border-radius: 10rpx;
 }
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #54b1c2;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.user-name{
+  display: flex;
+  flex-direction: row;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  padding-bottom: 20rpx;
+  padding-left: 45rpx;
+}
+
+.edit-pic{
+  /* margin-top: 5rpx; */
+  width: 25rpx;
+  height: 25rpx;
+  padding: 20rpx;
+  padding-top: 10rpx;
+}

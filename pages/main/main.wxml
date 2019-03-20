@@ -7,8 +7,21 @@
   <van-tabbar-item icon="setting-o" info="20">个人中心</van-tabbar-item>
 </van-tabbar>
 </view>
-<image></image>
-<button class="myButton" type= 'primary' catchtap='check'>开始评分</button>
-<button class="myButton" type= 'primary' catchtap='task'>发布任务</button>
-<button class="myButton" type= 'primary' catchtap='history' >历史信息查询</button>
+
+
+
+<view class='view-modal'>
+  <view class='view-modal-item view-modal-item1' type= 'primary' catchtap='check'>
+    <view><view class='view-modal-font'>开始评分</view></view>
+    <view><image class='view-modal-item-pic' src=''></image></view>
+  </view>
+  <view class='view-modal-item view-modal-item2' type= 'primary' catchtap='task'>
+    <view><view  class='view-modal-font'>发布任务</view></view>
+    <view><image class='view-modal-item-pic' src=''></image></view>
+  </view>
+  <view class='view-modal-item view-modal-item3' type= 'primary' catchtap='history'>
+    <view><view  class='view-modal-font'>历史信息查询</view></view>
+    <view><image class='view-modal-item-pic' src=''></image></view>
+  </view>
+</view>
 </view>

@@ -1,0 +1,11 @@
+<!--pages/help/help.wxml-->
+<view class='bt-about'>
+  <view class='text-title'>帮助信息</view>
+  <view class='text-content'></view>
+
+ 
+
+
+  <view class='text-title'>联系方式</view>
+ 
+</view>
