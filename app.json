@@ -11,7 +11,8 @@
     "pages/help/help",
     "pages/about/about",
     "pages/feedback/feedback",
-    "pages/modifyPasd/modifyPasd"
+    "pages/modifyPasd/modifyPasd",
+    "pages/historylist/historylist"
   ],
   "window": {
     "backgroundTextStyle": "light",

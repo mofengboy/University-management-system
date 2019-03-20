@@ -9,7 +9,7 @@
 </view>
 
 
-
+<image></image>
 <view class='view-modal'>
   <view class='view-modal-item view-modal-item1' type= 'primary' catchtap='check'>
     <view><view class='view-modal-font'>开始评分</view></view>

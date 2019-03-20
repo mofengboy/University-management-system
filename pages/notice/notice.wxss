@@ -33,7 +33,7 @@
 .th {
   width:40%;
   justify-content: center;
-  background: rgb(23, 209, 6);
+  background: #54b1c2;
   color: #fff;
   display: flex;
   height: 4rem;
@@ -41,7 +41,7 @@
 }
 .open{
 
-  background: rgb(23, 209, 6);
+  background: #54b1c2;
   height: 2rem;
   color: #FFFFFF;
   display: flex;

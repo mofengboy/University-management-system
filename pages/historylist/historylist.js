@@ -1,15 +1,11 @@
-// pages/history/history.js
+// pages/historylist/historylist.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current_year:'1',
-    current_month:'1',
-    current_day:'1',
-    currentDate:'1',
-    minDate:'1'
+
   },
 
   /**
@@ -22,15 +18,8 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () { 
-    let myDate = new Date();
-    this.setData({
-      current_year:myDate.getFullYear(),
-      current_month:myDate.getMonth()+1,
-      current_day:myDate.getDate(),
-      currentDate:myDate.getTime(),
-      maxDate:myDate.getTime()
-    })
+  onReady: function () {
+
   },
 
   /**
@@ -66,11 +55,6 @@ Page({
    */
   onReachBottom: function () {
 
-  },
-  historylist: function (e) {
-    wx.navigateTo({
-      url: '/pages/historylist/historylist',
-    })
   },
 
   /**
