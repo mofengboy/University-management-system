@@ -1,21 +1,10 @@
 /* pages/modifyPasd/modifyPasd.wxss */
 
-.my-form {
-  width: 80%;
+page{
+
+   background: #F0F0F0 ;
+
 }
-
-.my-input {
-  height: 80rpx;
-  line-height: 80rpx;
-  /* font-size: 50rpx; */
-  justify-content: center;
-  width: 95%;
-  padding-left: 5%;
-  background-color: #fff;
-}
-
-
-
 .row{
 
   margin-top: 20rpx;
@@ -63,6 +52,7 @@
     width: 420rpx;
 
 }
+
 .submit{
 
   margin-top: 50rpx;
@@ -74,5 +64,30 @@
   background: #54b1c2;
 
    color: #FFFFFF;
+
+}
+
+.success{
+
+  background: #ffffff;
+
+
+}
+
+.cheer{
+
+  text-align: center;
+
+  line-height: 400rpx;
+
+  font-size: 60rpx;
+
+  position: relative;
+
+}
+
+.return{
+
+  margin: 20rpx;
 
 }

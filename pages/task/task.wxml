@@ -18,6 +18,6 @@
 </van-panel>
 </view>
 <view>
-<van-button type="primary" size='large'>提交</van-button>
+<button class="submit" >提交</button>
 </view>
 </view>

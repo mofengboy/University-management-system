@@ -60,6 +60,8 @@
 </view>
 <button bindtap="go" class='submit'>确认</button>
 </view>
+
+
 <view class="table">
   <view class="tr bg-w">
     <view class="th">任务日期</view>

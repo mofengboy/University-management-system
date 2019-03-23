@@ -1,1 +1,14 @@
 /* pages/history/history.wxss */
+.submit{
+
+  margin-top: 50rpx;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  background: #54b1c2;
+
+   color: #FFFFFF;
+
+}

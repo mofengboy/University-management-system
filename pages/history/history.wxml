@@ -27,6 +27,6 @@
 </view>
 </van-panel>
 <view>
-<van-button type="primary" size='large' catchtap='historylist'>提交</van-button>
+<button class="submit"  catchtap='historylist'>提交</button>
 </view>
 </view>

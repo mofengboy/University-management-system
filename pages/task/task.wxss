@@ -1,5 +1,14 @@
 /* pages/task/task.wxss */
-.columns{
-  border:solid 2rpx blue;
-  background-color: pink
+.submit{
+
+  margin-top: 50rpx;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  background: #54b1c2;
+
+   color: #FFFFFF;
+
 }

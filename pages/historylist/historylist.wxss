@@ -1,1 +1,12 @@
 /* pages/historylist/historylist.wxss */
+.con-info{
+  margin:30rpx 30rpx;
+  overflow: hidden; 
+  font-size: 36rpx;
+  font-family: "微软雅黑";
+  color:#606060;
+}
+.coin-info{
+  line-height: 120rpx;
+  font-size: 32rpx;
+}

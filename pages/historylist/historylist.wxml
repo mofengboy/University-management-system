@@ -1,2 +1,18 @@
 <!--pages/historylist/historylist.wxml-->
-<text>pages/historylist/historylist.wxml</text>
+<view class="con-info">
+      <view class="coin-name">检查日期：</view>
+      <view class="coin-info">简介</view>
+    </view>
+<view class="con-info">
+      <view class="coin-name">检查时间：</view>
+      <view class="coin-info">简介</view>
+    </view>
+    <view class="con-info">
+      <view class="coin-name">检查地点：</view>
+      <view class="coin-info">简介</view>
+    </view>
+    <view class="con-info">
+      <view class="coin-name">检查评分：</view>
+      <view class="coin-info">简介</view>
+    </view>
+
