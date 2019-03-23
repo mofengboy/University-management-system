@@ -1,1 +1,33 @@
 /* pages/modifyPasd/modifyPasd.wxss */
+.section {
+  margin-top: 20rpx;
+  /* margin-bottom: 100rpx; */
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.my-form {
+  width: 80%;
+}
+
+.my-input {
+  height: 80rpx;
+  line-height: 80rpx;
+  /* font-size: 50rpx; */
+  justify-content: center;
+  width: 95%;
+  padding-left: 5%;
+  background-color: #fff;
+}
+
+.btn-area {
+  margin-top: 20rpx;
+  background-color: rgb(6, 226, 255)
+}
+
+.view-hr {
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 1rpx solid #eee;
+}

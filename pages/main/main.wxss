@@ -63,3 +63,22 @@ page{
 .view-modal-item3 {
   background-color: #54b1c2;
 }
+
+
+.div{
+  text-align: center;
+  margin:30px;
+}
+
+.w{  
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  font-size: 120px;
+}
+
+.a{
+font-size: 140px;
+margin: 20px;
+font-family: 黑体;
+}

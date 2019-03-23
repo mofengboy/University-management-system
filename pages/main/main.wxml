@@ -8,8 +8,14 @@
 </van-tabbar>
 </view>
 
+<div>
+  <span class="w" id="s">0</span>
+  <span class="a">:</span>
+  <span class="w" id="f">0</span>
+  <span class="a">:</span>
+  <span class="w" id="m">0</span>
+</div>
 
-<image></image>
 <view class='view-modal'>
   <view class='view-modal-item view-modal-item1' type= 'primary' catchtap='check'>
     <view><view class='view-modal-font'>开始评分</view></view>
