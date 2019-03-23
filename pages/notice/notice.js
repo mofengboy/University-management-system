@@ -82,7 +82,7 @@ Page({
       case 2: jumpUrl = "/pages/personal/personal";
         break;
     }
-    wx.navigateTo({
+    wx.reLaunch({
       url: jumpUrl,
     })
   },

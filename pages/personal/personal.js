@@ -19,6 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    //获取用户基本信息
     wx.getStorage({
       key: 'token',
       success: res => {
@@ -82,7 +83,7 @@ Page({
       case 2: jumpUrl = "/pages/personal/personal";
         break;
     }
-    wx.navigateTo({
+    wx.reLaunch({
       url: jumpUrl,
     })
   },
@@ -92,13 +93,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  getStorag: function () { // 获取本地存储信息
-    var data = wx.getStorageSync("login");
-    return {
-      sdk: data.sdk,
-      uid: data.uid
-    }
   },
   quitFn: function () {    // 退出登陆
     Utils.removeStorage("Reset");
