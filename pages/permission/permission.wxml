@@ -1,0 +1,12 @@
+<!--pages/permission/permission.wxml-->
+
+<view class='wrap'>
+  <view class='checkbox-con'>
+    <radio-group bindchange="radioChange">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{checkboxArr}}" bindtap='radio' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </label>
+    </radio-group>
+     <button class="submit" bindtap='confirm'>提交</button>
+  </view>
+</view>

@@ -1,16 +1,33 @@
 <!--pages/modifyPasd/modifyPasd.wxml-->
 <form class='my-form' bindsubmit="formSubmit" bindreset="formReset">
 
-<view class="section">
-  <input name="userName" class='my-input' placeholder="" value='{{userInfo.userName}}'  focus='true' maxlength='20' />
+<view class='row'>
+
+        <view class='info'>
+
+               <input  class= 'info-input' placeholder="请输入原号码：" />
+
+         </view>
+
+ 
+
+ </view>
+
+  <view class='row'>
+
+        <view class='info'>
+
+               <input class= 'info-input'  placeholder="请输入换绑的号码：" />
+
+         </view>
 </view>
-
-  <view class="btn-area">
-    <button formType="submit" type="primary">修改</button>
+<view>
+  <view >
+    <button  class="submit"  type="primary">修改</button>
   </view>
 
-  <view class="btn-area">
-    <button bindtap='doCancel'>取消</button>
+  <view >
+    <button class="submit" bindtap='doCancel'>取消</button>
   </view>
-
+</view>
 </form>

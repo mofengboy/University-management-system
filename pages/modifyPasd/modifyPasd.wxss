@@ -1,11 +1,4 @@
 /* pages/modifyPasd/modifyPasd.wxss */
-.section {
-  margin-top: 20rpx;
-  /* margin-bottom: 100rpx; */
-  height: 80rpx;
-  line-height: 80rpx;
-  border-bottom: 1rpx solid #ccc;
-}
 
 .my-form {
   width: 80%;
@@ -21,13 +14,65 @@
   background-color: #fff;
 }
 
-.btn-area {
+
+
+.row{
+
   margin-top: 20rpx;
-  background-color: rgb(6, 226, 255)
+
+  overflow: hidden;
+
+  line-height: 100rpx;
+
+  border-bottom: 1rpx solid #ccc;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  color: #777;
+
+  background: #fff;
+
+ 
+
 }
 
-.view-hr {
-  width: 90%;
-  margin-left: 5%;
-  border-bottom: 1rpx solid #eee;
+.info-input{
+
+  height: 100rpx;
+
+  margin-left: 50rpx;
+
+  color: #777;
+
+    float: left;
+
+}
+
+.info-input1{
+
+  height: 100rpx;
+
+  margin-left: 50rpx;
+
+  color: #777;
+
+    float: left;
+
+    width: 420rpx;
+
+}
+.submit{
+
+  margin-top: 50rpx;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  background: #54b1c2;
+
+   color: #FFFFFF;
+
 }

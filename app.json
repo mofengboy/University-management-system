@@ -12,7 +12,8 @@
     "pages/about/about",
     "pages/feedback/feedback",
     "pages/modifyPasd/modifyPasd",
-    "pages/historylist/historylist"
+    "pages/historylist/historylist",
+    "pages/permission/permission"
   ],
   "window": {
     "backgroundTextStyle": "light",

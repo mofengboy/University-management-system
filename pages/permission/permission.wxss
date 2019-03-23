@@ -1,0 +1,51 @@
+/* pages/permission/permission.wxss */
+.wrap{
+  width: 90%;
+  margin: 50rpx auto;
+
+}
+ 
+.checkbox-con{
+  margin-top: 40rpx;
+  text-align: center
+}
+.checkbox{
+  width: 260rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #888888;
+  border: 1rpx solid #CECECE;
+  border-radius: 5rpx;
+  display: inline-block;
+  margin: 0 10rpx 20rpx 0;
+  position: relative
+}
+.checked{
+  color: #1A92EC;
+  background: rgba(49,165,253,0.08);
+  border: 1rpx solid #31A5FD;
+}
+.checkbox checkbox{
+  display: none
+}
+.checked-img{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+.submit{
+
+  margin-top: 50rpx;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  background: #54b1c2;
+
+   color: #FFFFFF;
+
+}

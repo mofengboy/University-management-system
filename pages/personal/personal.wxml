@@ -32,6 +32,10 @@
                 <text>换绑手机</text>
                 <image src='/images/icon/sort.png'></image>
         </navigator>
+        <navigator url='/pages/permission/permission'>
+                <text>申请权限</text>
+                <image src='/images/icon/Viewlist.png'></image>
+        </navigator>
          <navigator url="/pages/feedback/feedback">
                 <text>意见反馈</text>
                 <image src='/images/icon/timeline.png'></image>
