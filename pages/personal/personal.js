@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    realName:''
   },
 
   /**
@@ -19,7 +19,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        wx.request({
+          url: 'https://college.netlab.sunan.me/user/info/basic',
+          method: 'POST',
+          data: {
+            token: res.data
+          },
+          success: res => {
+            this.setData({
+              realName: res.data.real_name
+            })
+          }
+        })
+      }
+    })
   },
 
   /**

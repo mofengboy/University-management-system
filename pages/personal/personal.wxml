@@ -11,9 +11,9 @@
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{userInfo.userName == null}}">
-      <image class="userinfo-avatar" src="{{userInfo.userFigure}}" background-size="cover" ></image>
+    <open-data type='userAvatarUrl' class="userinfo-avatar" background-size="cover"></open-data>
       <view class='user-name'>
-        <text class="userinfo-nickname">未设置</text>
+        <text class="userinfo-nickname">{{realName}}</text>
         <image class='edit-pic' bindtap='toMyUserInfo' src='/images/icon/edit.png'></image>
       </view>
     </block>
