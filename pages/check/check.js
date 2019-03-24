@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     
   },
 
   /**
@@ -50,11 +50,40 @@ Page({
 
   },
 
+
+
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
 
+  },
+  confirm: function (e) {
+    console.log(e)
+    let _this = this;
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        console.log(this.data)
+        wx.request({
+          url: 'http://college.netlab.sunan.me/wechat/index/check',
+          method: 'POST',
+          data: {
+            token: res.data,
+            building: e.detail.value.building,
+            room: e.detail.value.room,
+            scores: e.detail.value.scores,
+
+          },
+          success: res => {
+            console.log(res)
+            this.setData({
+
+            })
+          }
+        })
+      }
+    })
   },
 
   /**

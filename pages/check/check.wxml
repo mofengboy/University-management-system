@@ -1,11 +1,11 @@
 <!--pages/check/check.wxml-->
-<view wx:if="{{!success}}">
+<form bindsubmit='confirm'>
 
  <view class='row'>
 
         <view class='info'>
 
-               <input  class= 'info-input1'  placeholder="请输入宿舍楼号" />
+               <input name="building" class= 'info-input1'  placeholder="请输入宿舍楼号" />
 
          </view>
 
@@ -15,7 +15,7 @@
 
         <view class='info'>
 
-               <input  class= 'info-input' placeholder="请输入宿舍号" />
+               <input name="room" class= 'info-input' placeholder="请输入宿舍号" />
 
          </view>
 
@@ -27,7 +27,7 @@
 
         <view class='info'>
 
-               <input class= 'info-input'  placeholder="请输入评分" />
+               <input name="scores" class= 'info-input'  placeholder="请输入评分" />
 
          </view>
 
@@ -35,14 +35,14 @@
 
  </view>
 
-<button class='submit' bindtap="chooseimage">拍摄图片</button>
+<button class='submit' bindtap="choose">拍摄图片</button>
 
-<image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
+<image src="{{tempFilePaths}}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
 
 
- <button class='submit' bindtap='submit'>提交</button>
+ <button class='submit' form-type='submit'>提交</button>
 
- </view>
+ </form>
 
  <view class = 'success' wx:if="{{success}}">
 
