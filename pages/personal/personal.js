@@ -30,6 +30,7 @@ Page({
             token: res.data
           },
           success: res => {
+            console.log(res)
             this.setData({
               realName: res.data.real_name
             })

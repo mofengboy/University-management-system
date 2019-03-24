@@ -42,6 +42,26 @@ Page({
   onUnload: function () {
 
   },
+  confirm: function () {
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        wx.request({
+          url: 'http://college.netlab.sunan.me/wechat/person/feedback',
+          method: 'POST',
+          data: {
+            token: res.data,
+            content: res.data.content
+          },
+          success: res => {
+            console.log(res)
+            this.setData({ 
+            })
+          }   
+        })
+      }
+    })
+  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作

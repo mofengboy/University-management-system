@@ -2,8 +2,8 @@
 <view class='leave'>
         请输入意见，谢谢！
         <view class='bk'>
-        <textarea class="textarea" placeholder="请输入：" maxlength='300' adjust-position= 'true'></textarea>
+        <textarea class="textarea" placeholder="请输入：" maxlength='300' adjust-position= 'true'>{{content}}</textarea>
         </view>
-        <button class='btn' formType="submit">提 交</button>
+        <button class='btn' catchtap='confirm'>提 交</button>
 </view>
 
