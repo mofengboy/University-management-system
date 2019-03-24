@@ -42,7 +42,9 @@ Page({
   onUnload: function () {
 
   },
-  confirm: function () {
+  confirm: function (e) {
+    console.log(e)
+    let _this = this;
     wx.getStorage({
       key: 'token',
       success: res => {
@@ -52,11 +54,12 @@ Page({
           method: 'POST',
           data: {
             token: res.data,
-            content: this.data.content
+            content: _this.data.content
           },
           success: res => {
             console.log(res)
             this.setData({ 
+
             })
           }   
         })
