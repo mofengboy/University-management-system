@@ -54,7 +54,7 @@ Page({
           method: 'POST',
           data: {
             token: res.data,
-            content: _this.data.content
+            content: e.detail.value.content
           },
           success: res => {
             console.log(res)

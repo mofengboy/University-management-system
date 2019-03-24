@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    newPhone:"",
+    oldPhone:""
   },
 
   /**
@@ -55,6 +56,28 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+  confirm: function (e) {
+    console.log(e)
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        wx.request({
+          url: 'http://college.netlab.sunan.me/wechat/person/phone',
+          method: 'POST',
+          data: {
+            token: res.data,
+            oldPhone: e.detail.value.oldPhone,
+            newPhone: e.detail.value.newPhone
+          },
+          success: res => {
+            this.setData({
+
+            })
+          }
+        })
+      }
+    })
   },
 
   /**

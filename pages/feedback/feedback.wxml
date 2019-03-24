@@ -1,11 +1,9 @@
 <!--pages/feedback/feedback.wxml-->
 <view class='leave'>
- <form bindsubmit='confirm'>
-        请输入意见，谢谢！
-        <view class='bk'>
-        <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='300' adjust-position= 'true' 
-        value='{{content}}'></textarea>
-        </view>
-        <button class='btn' form-type='submit'>提 交</button>
-        </form>
+请输入意见，谢谢！
+<form bindsubmit='confirm' class='bk'> 
+      <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='300'  value='{{content}}'>
+      </textarea>
+      <button class='btn' form-type='submit'>提 交</button>
+      </form>
 </view>

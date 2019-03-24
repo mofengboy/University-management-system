@@ -20,7 +20,8 @@
 .bk {
   border: 2rpx solid #ccc;
   width: 80%;
-  height: 280px
+  height: 280px;
+  align-items: center;
 }
 .textarea {
   font-size: 40rpx;
@@ -32,3 +33,4 @@
   font-size: 40rpx;
   color: gray;
 }
+

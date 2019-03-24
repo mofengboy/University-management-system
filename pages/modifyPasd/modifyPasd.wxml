@@ -1,34 +1,19 @@
 <!--pages/modifyPasd/modifyPasd.wxml-->
-<view wx:if="{{!success}}">
+<form bindsubmit='confirm'>
 
  <view class='row'>
-
         <view class='info'>
-
-               <input  class= 'info-input1'  placeholder="请输入原号码" />
-
+               <input name="oldPhone"  class= 'info-input1'  placeholder="请输入原号码:" value="{{oldPhone}}"/>
          </view>
-
-
-
- 
-
  </view>
-
   <view class='row'>
-
         <view class='info'>
-
-               <input class= 'info-input'  placeholder="请输入新号码" />
-
+               <input name="newPhone" class= 'info-input'  placeholder="请输入新号码:" value="{{newPhone}}"/>
          </view>
+ </view> 
+ <button class='submit' form-type='submit'>提交</button>
 
- 
-
- </view>
- <button class='submit' bindtap='submit'>提交</button>
-
- </view>
+ </form>
 
  <view class = 'success' wx:if="{{success}}">
 
