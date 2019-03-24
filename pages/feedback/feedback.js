@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content:''
   },
 
   /**
@@ -46,12 +46,13 @@ Page({
     wx.getStorage({
       key: 'token',
       success: res => {
+        console.log(this.data)
         wx.request({
           url: 'http://college.netlab.sunan.me/wechat/person/feedback',
           method: 'POST',
           data: {
             token: res.data,
-            content: res.data.content
+            content: this.data.content
           },
           success: res => {
             console.log(res)

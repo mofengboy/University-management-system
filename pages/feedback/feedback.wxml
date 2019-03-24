@@ -6,4 +6,3 @@
         </view>
         <button class='btn' catchtap='confirm'>提 交</button>
 </view>
-
