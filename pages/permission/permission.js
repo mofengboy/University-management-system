@@ -5,11 +5,14 @@ Page({
    * 页面的初始数据
    */
     data: {
+      auth: 0,
       checkboxArr: [{
         name: '一级权限',
+        
         checked: false
       }, {
         name: '二级权限',
+        
         checked: false
       }, {
         name: '三级权限',
@@ -21,8 +24,15 @@ Page({
     },
     radio: function (e) {
       var index = e.currentTarget.dataset.index;//获取当前点击的下标
+      this.setData({
+        auth: index
+      })
+      console.log(index)
       var checkboxArr = this.data.checkboxArr;//选项集合
-      if (checkboxArr[index].checked) return;//如果点击的当前已选中则返回
+      if (checkboxArr[index].checked)
+        return 
+       ;
+       //如果点击的当前已选中则返回
       checkboxArr.forEach(item => {
         item.checked = false
       })
@@ -37,9 +47,28 @@ Page({
         checkValue: checkValue
       });
     },
-    confirm: function () {// 提交
-      console.log(this.data.checkValue)//所有选中的项的value
-    },
+  confirm: function (e) {
+    console.log(e)
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        wx.request({
+          url: 'http://college.netlab.sunan.me/wechat/person/authority',
+          method: 'POST',
+          data: {
+            token: res.data,
+            auth: this.data.auth
+          },
+          success: res => {
+            console.log(res)
+            this.setData({
+            })
+          }
+        })
+      }
+    })
+  },
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -89,6 +118,7 @@ Page({
   onReachBottom: function () {
 
   },
+ 
 
   /**
    * 用户点击右上角分享
