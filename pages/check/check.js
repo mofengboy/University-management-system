@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-     
+    photoUrl:'/images/default.png' 
   },
 
   /**
@@ -58,6 +58,30 @@ Page({
   onReachBottom: function () {
 
   },
+ 
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+
+  /*
+  *自定义函数
+  */
+  choose:function(){
+    wx.chooseImage({
+      count:1,
+      sizeType:['original'],
+      sourceType:['camera'],
+      success: res=> {
+        this.setData({
+          photoUrl: res.tempFilePaths[0]
+        })
+      },
+    })
+  },
   confirm: function (e) {
     console.log(e)
     let _this = this;
@@ -85,11 +109,4 @@ Page({
       }
     })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

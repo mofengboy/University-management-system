@@ -34,13 +34,11 @@
  
 
  </view>
-
+<view class='photo'>
+<image src='{{photoUrl}}' mode='aspectFill'></image>
+</view>
 <button class='submit' bindtap="choose">拍摄图片</button>
-
-<image src="{{tempFilePaths}}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
-
-
- <button class='submit' form-type='submit'>提交</button>
+<button class='submit' form-type='submit'>提交</button>
 
  </form>
 
