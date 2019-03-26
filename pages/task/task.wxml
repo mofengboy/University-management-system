@@ -1,6 +1,17 @@
 <!--pages/task/task.wxml-->
 <view>
 <form bindsubmit='confirm'>
+
+ <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input'  placeholder="请输入检查人员" />
+         </view>
+ </view>
+ <view class='row'>
+        <view class='info'>
+               <input class= 'info-input'  placeholder="请输入检查时间" />
+         </view>
+ </view>
  <view class='row'>
         <view class='info'>
                <input name="building" class= 'info-input1'  placeholder="请输入宿舍楼号" />
@@ -9,16 +20,6 @@
  <view class='row'>
         <view class='info'>
                <input name="room" class= 'info-input' placeholder="请输入宿舍号" />
-         </view>
- </view>
-  <view class='row'>
-        <view class='info'>
-               <input class= 'info-input'  placeholder="请输入检查时间" />
-         </view>
- </view>
- <view class='row'>
-        <view class='info'>
-               <input  class= 'info-input'  placeholder="请输入检查人员" />
          </view>
  </view>
  <view class='row'>
