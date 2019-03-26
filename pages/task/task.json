@@ -1,5 +1,5 @@
 {
-"navigationBarTitleText": "分派任务",
+"navigationBarTitleText": "发布公告",
 "usingComponents": {
   "van-panel": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/panel/index",
   "van-button": "/miniprogram_npm/_vant-weapp@0.5.6@vant-weapp/button/index",

@@ -16,7 +16,7 @@
     <view><image class='view-modal-item-pic' src=''></image></view>
   </view>
   <view class='view-modal-item view-modal-item2' type= 'primary' catchtap='task'>
-    <view><view  class='view-modal-font'>发布任务</view></view>
+    <view><view  class='view-modal-font'>发布公告</view></view>
     <view><image class='view-modal-item-pic' src=''></image></view>
   </view>
   <view class='view-modal-item view-modal-item3' type= 'primary' catchtap='history'>

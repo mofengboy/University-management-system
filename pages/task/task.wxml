@@ -1,23 +1,32 @@
 <!--pages/task/task.wxml-->
 <view>
-<view>
-<van-panel title="时间"status="当前时间：周{{current_time}}" use-footer-slot>
-  <view class='columns'>
-  <text>选择时间:</text>
-  <van-picker columns="{{columns}}"></van-picker>
-  </view>
-  <view class='columns'>
-  <text>选择人员</text>
-  <van-cell-group>
-  <van-field
-    value="{{ value }}"
-    placeholder="请输入人员名单"
-  />
-</van-cell-group>
-  </view>
-</van-panel>
-</view>
-<view>
-<button class="submit" >提交</button>
-</view>
+<form bindsubmit='confirm'>
+ <view class='row'>
+        <view class='info'>
+               <input name="building" class= 'info-input1'  placeholder="请输入宿舍楼号" />
+         </view>
+ </view>
+ <view class='row'>
+        <view class='info'>
+               <input name="room" class= 'info-input' placeholder="请输入宿舍号" />
+         </view>
+ </view>
+  <view class='row'>
+        <view class='info'>
+               <input class= 'info-input'  placeholder="请输入检查时间" />
+         </view>
+ </view>
+ <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input'  placeholder="请输入检查人员" />
+         </view>
+ </view>
+ <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input'  placeholder="请输入检查细则" />
+         </view>
+ </view>
+<button class='submit' form-type='submit'>提交</button>
+
+ </form>
 </view>
