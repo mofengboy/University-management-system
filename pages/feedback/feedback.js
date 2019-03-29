@@ -50,7 +50,7 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: 'http://college.netlab.sunan.me/wechat/person/feedback',
+          url: 'https://college.netlab.sunan.me/wechat/person/feedback',
           method: 'POST',
           data: {
             token: res.data,
