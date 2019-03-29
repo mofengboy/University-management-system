@@ -48,5 +48,4 @@
                 <text>帮助</text>
                 <image src='/images/icon/teacher.png'></image>
         </navigator>
-        <view class='quit' bindtap='quitFn'><text>退出登陆</text></view>
 </view>

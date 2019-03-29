@@ -94,30 +94,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  quitFn: function () {    // 退出登陆
-    Utils.removeStorage("Reset");
-    var res = this.getStorag();
-    Utils.requestFn({
-      url: 'https://college.netlab.sunan.me/login/isopenid/index',
-      method: "POST",
-      data: {
-        sdk: res.sdk,
-        uid: res.uid
-      },
-      success: function (res) {
-        if (res.data.status) {
-          wx.reLaunch({
-            url: '/pages/index/index'
-          })
-          Utils.removeStorage("login");
-
-        } else {
-          Utils.reLaunch(res.data.message, "/pages/index/index");
-          Utils.removeStorage("login");
-        }
-        return false;
-      }
-    })
   }
+  
 })
