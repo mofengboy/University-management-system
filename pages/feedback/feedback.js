@@ -43,7 +43,6 @@ Page({
 
   },
   confirm: function (e) {
-    console.log(e)
     let _this = this;
     wx.getStorage({
       key: 'token',
@@ -57,10 +56,16 @@ Page({
             content: e.detail.value.content
           },
           success: res => {
-            console.log(res)
-            this.setData({ 
-
-            })
+            if(res.data == 0){
+              wx.showToast({
+                title: '提交成功',
+                icon: 'success',
+                duration: 1500
+              })
+              setTimeout(function(){
+              wx.navigateBack({})
+              },1500)
+            }
           }   
         })
       }
