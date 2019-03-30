@@ -58,7 +58,9 @@ Page({
 
   },
   confirm: function (e) {
-    console.log(e)
+    wx.showLoading({
+      title: '提交中',
+    })
     wx.getStorage({
       key: 'token',
       success: res => {
@@ -71,8 +73,9 @@ Page({
             newPhone: e.detail.value.newPhone
           },
           success: res => {
-            this.setData({
-
+            wx.hideLoading();
+            wx.navigateBack({
+              
             })
           }
         })

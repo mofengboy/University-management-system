@@ -101,6 +101,9 @@ Page({
   },
   // 确认
   confirm: function (e) {
+    wx.showLoading({
+      title: '图片上传中',
+    })
     let nowDate = new Date();
     let checkDateYear = nowDate.getFullYear();
     let checkDate = checkDateYear.toString()+ (nowDate.getMonth()+1)+nowDate.getDate();
@@ -132,6 +135,7 @@ Page({
           },
           success: res => {
             if(res.data == 0){
+              wx.hideLoading();
               wx.redirectTo({
                 url: '/pages/main/main',
               })
