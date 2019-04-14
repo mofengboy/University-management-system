@@ -10,5 +10,68 @@
   background: #54b1c2;
 
    color: #FFFFFF;
+}
+
+.modalDlg{
+    
+    width: 580rpx;
+
+    height: 620rpx;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 0;
+
+    z-index: 9999;
+
+    margin: -370rpx 85rpx;
+
+    background-color: #fff;
+
+    border-radius: 36rpx;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+.row{
+
+  margin-top: 20rpx;
+
+  overflow: hidden;
+
+  line-height: 100rpx;
+
+  border-bottom: 1rpx solid #ccc;
+
+  margin-left: 20rpx;
+
+  margin-right: 20rpx;
+
+  color: #777;
+
+  background: #fff;
+
+ 
+
+}
+
+
+.info-input1{
+
+  height: 120rpx;
+
+  margin-left: 50rpx;
+
+  color: #777;
+
+    float: left;
+
+    width: 480rpx;
 
 }

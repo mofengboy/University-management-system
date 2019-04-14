@@ -72,6 +72,39 @@ Page({
       url: '/pages/historylist/historylist',
     })
   },
+  confirm: function (e) {
+    let _this = this;
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        console.log(this.data)
+        wx.request({
+          url: 'https://college.netlab.sunan.me/wechat/index/history',
+          method: 'POST',
+          data: {
+            date: e.detail.value.date,
+            building: e.detail.value.building,
+            room: e.detail.value.room,
+            checkDate: res.checkDate,
+            checkTime: res.checkTime,
+            scores: res.scores,
+            photoUrl: res.photoUrl,
+            person: res.person
+          }
+             
+        })
+      }
+    })
+  },
+  submit: function () {
+
+    this.setData({
+
+      showModal: true
+
+    })
+
+  },
 
   /**
    * 用户点击右上角分享

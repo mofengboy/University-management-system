@@ -1,13 +1,5 @@
 // pages/task/task.js
-const list = {
-  '周日': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周一': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周二': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周三': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周四': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周五': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-  '周六': ['第一大节', '第二大节', '第三大节', '第四大节', '第五大节', '第六大节'],
-};
+
 Page({
 
   /**
@@ -15,18 +7,7 @@ Page({
    */
 
   data: {
-    current_time: "日",
-    columns: [
-      {
-        values: Object.keys(list),
-        className: 'column1'
-      },
-      {
-        values: list['周日'],
-        className: 'column2',
-        defaultIndex: 2
-      }
-    ]
+    
   },
 
   /**
@@ -40,38 +21,40 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    let myDate = new Date();
-    let week = myDate.getDay();
-    switch(week){
-      case 0: this.setData({
-        current_time: '日'
-      });;
-      break;
-      case 1: this.setData({
-        current_time: '一'
-      });;
-      break;
-      case 2: this.setData({
-        current_time: '二'
-      });;
-      break;
-      case 3: this.setData({
-        current_time: '三'
-      });;
-      break;
-      case 4: this.setData({
-        current_time: '四'
-      });;
-      break;
-      case 5: this.setData({
-        current_time: '五'
-      });;
-      break;
-      case 6: this.setData({
-        current_time:'六'
-        });
-      break;
-    }
+    
+  },
+  confirm: function (e) {
+    let _this = this;
+    wx.getStorage({
+      key: 'token',
+      success: res => {
+        console.log(this.data)
+        wx.request({
+          url: 'https://college.netlab.sunan.me/wechat/person/feedback',
+          method: 'POST',
+          data: {
+            token: res,
+            person: e.detail.value.person,
+            checkTime: e.detail.value.checkTime,
+            building: e.detail.value.building,
+            room: e.detail.value.room,
+            rule: e.detail.value.rule
+          },
+          success: res => {
+            if (res == 0) {
+              wx.showToast({
+                title: '提交成功',
+                icon: 'success',
+                duration: 1500
+              })
+              setTimeout(function () {
+                wx.navigateBack({})
+              }, 1500)
+            }
+          }
+        })
+      }
+    })
   },
 
   /**
