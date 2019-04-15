@@ -9,7 +9,12 @@ Page({
     current_month:'1',
     current_day:'1',
     currentDate:'1',
-    minDate:'1'
+    minDate:'1',
+    checkDate:'0',
+    checkTime:'0',
+    scores:'0',
+    photoUrl:'0',
+    person:'0'
   },
 
   /**
@@ -67,35 +72,28 @@ Page({
   onReachBottom: function () {
 
   },
-  historylist: function (e) {
-    wx.navigateTo({
-      url: '/pages/historylist/historylist',
-    })
-  },
+
   confirm: function (e) {
-    let _this = this;
-    wx.getStorage({
-      key: 'token',
-      success: res => {
-        console.log(this.data)
-        wx.request({
-          url: 'https://college.netlab.sunan.me/wechat/index/history',
-          method: 'POST',
-          data: {
-            date: e.detail.value.date,
-            building: e.detail.value.building,
-            room: e.detail.value.room,
-            checkDate: res.checkDate,
-            checkTime: res.checkTime,
-            scores: res.scores,
-            photoUrl: res.photoUrl,
-            person: res.person
-          }
-             
+    var that=this
+    wx.request({
+      url: 'https://college.netlab.sunan.me/wechat/index/history',
+      method: 'POST',
+      data: {
+        date: e.detail.value.date,
+        building: e.detail.value.building,
+        room: e.detail.value.room  
+      },
+      success: function(res){
+        console.log(res)
+        if(res.statusCode==200){
+        that.setData({
+          history:res.data
         })
+        }
       }
     })
-  },
+  }, 
+        
   submit: function () {
 
     this.setData({
@@ -111,5 +109,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  } 
 })

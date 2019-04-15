@@ -1,4 +1,9 @@
 /* pages/history/history.wxss */
+page{
+
+   background: #F0F0F0 ;
+
+}
 .submit{
 
   margin-top: 50rpx;
@@ -59,6 +64,15 @@
 
  
 
+}
+.info-input{
+  height: 100rpx;
+
+  margin-left: 50rpx;
+
+  color: #777;
+
+    float: left;
 }
 
 
