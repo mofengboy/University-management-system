@@ -26,13 +26,15 @@ page{
   border-radius: 50rpx;
 }
 .view-modal-item-pic{
-  width: 240rpx;
-  height: 120rpx;
+  width: 110rpx;
+  height: 110rpx;
   margin-top: 25rpx;
     /* border: 1rpx solid red;    */
  margin-left:110rpx;
 }
-
+.view-modal1{
+  width: 60%
+}
 .view-modal-font {
   margin: 30rpx;
   color: #fff;
@@ -63,6 +65,4 @@ page{
 .view-modal-item3 {
   background-color: #54b1c2;
 }
-
-
 

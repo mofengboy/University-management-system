@@ -12,16 +12,16 @@
 
 <view class='view-modal'>
   <view class='view-modal-item view-modal-item1' type= 'primary' catchtap='check'>
-    <view><view class='view-modal-font'>开始评分</view></view>
-    <view><image class='view-modal-item-pic' src=''></image></view>
+    <view class='view-modal1'><view class='view-modal-font'>开始评分</view></view>
+    <view><image class='view-modal-item-pic' src='/images/icon/person_comment_icon.png'></image></view>
   </view>
   <view class='view-modal-item view-modal-item2' type= 'primary' catchtap='task'>
-    <view><view  class='view-modal-font'>发布公告</view></view>
-    <view><image class='view-modal-item-pic' src=''></image></view>
+    <view class='view-modal1'><view  class='view-modal-font'>发布公告</view></view>
+    <view><image class='view-modal-item-pic' src='/images/icon/person_contribute_icon.png'></image></view>
   </view>
   <view class='view-modal-item view-modal-item3' type= 'primary' catchtap='history'>
-    <view><view  class='view-modal-font'>历史信息查询</view></view>
-    <view><image class='view-modal-item-pic' src=''></image></view>
+    <view class='view-modal1'><view  class='view-modal-font'>历史信息查询</view></view>
+    <view><image class='view-modal-item-pic' src='/images/icon/person_vote_icon.png'></image></view>
   </view>
 </view>
 </view>
