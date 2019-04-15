@@ -19,6 +19,19 @@
       <view class="info-input1">{{history.scores}}</view>
     </view>   
 </view>
+<view class="row">
+  <view class="info-input1">请在下方选择日期</view>
+  <picker
+    name="date"
+    mode="date"
+    value="{{date}}"
+    end="{{maxDate}}"
+    bindchange="bindDateChange">
+    <view class="info-input1">
+      当前选择: {{date}} >>
+    </view>
+  </picker>
+</view>
 
 <view class='row'>
         <view class='info'>
