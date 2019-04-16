@@ -65,4 +65,12 @@ page{
 .view-modal-item3 {
   background-color: #54b1c2;
 }
-
+.clock{
+  display: flex;
+  justify-content: center;
+   height: 250rpx;
+   font-family: "heiti";
+   font-size: 150rpx;
+   color:#226a77;
+   margin-top: 75rpx;
+}

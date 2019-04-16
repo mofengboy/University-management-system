@@ -65,10 +65,18 @@ Page({
   
   onLoad: function () {
     console.log('onLoad')
-  },
-  noticeview: function (e) {
-    wx.navigateTo({
-      url: '/pages/noticeview/noticeview',
+    let that = this;
+    wx.request({
+          url: 'http://college.netlab.sunan.me/wechat/index/notice',
+          method: 'POST',
+        success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          that.setData({
+            notice: res.data.array
+          })
+        }
+      }      
     })
   },
   //标签导航
@@ -87,16 +95,7 @@ Page({
     })
   },
 
-  data: {
-
-    showModal: false,
-    listData: [
-      { "date": "周一", "time": "11：00~12：00" },
-      { "date": "周二", "time": "11：00~12：00" },
-      { "date": "周三", "time": "11：00~12：00" }
-    ]
-  },
-
+  
 
 
   submit: function () {

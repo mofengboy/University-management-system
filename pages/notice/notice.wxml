@@ -8,16 +8,9 @@
 </van-tabbar>
 </view>
 
-<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
-
- 
-
-<view class="modalDlg" wx:if="{{showModal}}">
-
-
 </view>
 <view class="table" >
-  <block wx:for="{{listData}}" wx:key="{{code}}">
+  
     <view class="record" >
     <view class="on">
        <text class="action">检查任务</text>
@@ -25,14 +18,11 @@
     </view>
     <view class="hr"></view>
     <view class="shortintro">
-    <text>请 同学于{{item.date}}  {{item.time}}到 宿舍楼检查 宿舍
-    检查细则为：</text>
+    <text>请{{notice.person}} 同学于{{notice.check_time}}到{{notice.building}}宿舍楼检查{{notice.id.room}} 宿舍
+    检查细则为：{{notice.rule}}</text>
     </view>
   <view class="under">
-       <text class="time">{{item.date}}  {{item.time}}</text>
+       <text class="time">{{notice.check_time}}</text>
   </view>
-</view>
-
-  </block>
 </view>
 </view>

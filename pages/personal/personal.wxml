@@ -42,7 +42,7 @@
         </navigator>
          <navigator url='/pages/about/about'>
                 <text>关于</text>
-                <image src='/images/icon/comment.png'></image>
+                <image src='/images/icon/com.png'></image>
         </navigator>
          <navigator  url='/pages/help/help'>
                 <text>帮助</text>

@@ -1,6 +1,7 @@
 <!--pages/history/history.wxml-->
 <view>
 <form bindsubmit='confirm'>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modalDlg" wx:if="{{showModal}}"> 
    <view class="row">
       <view class="info-input1">检查日期：</view>
