@@ -70,7 +70,8 @@ page{
   justify-content: center;
    height: 250rpx;
    font-family: "heiti";
-   font-size: 150rpx;
+   font-size: 140rpx;
    color:#226a77;
-   margin-top: 75rpx;
+   margin-top: 85rpx;
+   margin-bottom: 85rpx;
 }
