@@ -14,14 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var time = util.formatTime(new Date())
-
-    //为页面中time赋值
-
-    this.setData({
-
-      time: time
-    })
+    
     wx.getStorage({
       key: 'token',
       success: res => {
@@ -86,9 +79,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    time: util.formatTime(new Date)
-
+    var that = this;
+    setInterval(function () {
+      that.setData({
+        time: util.currentTime()
+      });
+    }, 1000)
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏
