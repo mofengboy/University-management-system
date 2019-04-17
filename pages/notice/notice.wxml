@@ -18,11 +18,43 @@
     </view>
     <view class="hr"></view>
     <view class="shortintro">
-    <text>请{{notice.person}} 同学于{{notice.check_time}}到{{notice.building}}宿舍楼检查{{notice.id.room}} 宿舍
-    检查细则为：{{notice.rule}}</text>
+    <text>请{{notice1.person}} 同学于{{notice1.check_time}}到{{notice1.building}}宿舍楼检查{{notice1.id.room}} 宿舍
+    检查细则为：{{notice1.rule}}</text>
     </view>
   <view class="under">
-       <text class="time">{{notice.check_time}}</text>
+       <text class="time">{{notice1.check_time}}</text>
+  </view>
+</view>
+    <view class="record" >
+    <view class="on">
+       <text class="action">检查任务</text>
+       <text class="get">!></text>
+    </view>
+    <view class="hr"></view>
+    <view class="shortintro">
+    <text>请{{notice2.person}} 同学于{{notice2.check_time}}到{{notice2.building}}宿舍楼检查{{notice2.id.room}} 宿舍
+    检查细则为：{{notice2.rule}}</text>
+    </view>
+  <view class="under">
+       <text class="time">{{notice2.check_time}}</text>
+  </view>
+</view>
+
+
+  
+    <view class="record" >
+    <view class="on">
+       <text class="action">检查任务</text>
+       <text class="get">!></text>
+    </view>
+    <view class="hr"></view>
+    <view class="shortintro">
+    <text>请{{notice3.person}} 同学于{{notice3.check_time}}到{{notice3.building}}宿舍楼检查{{notice3.id.room}} 宿舍
+    检查细则为：{{notice3.rule}}</text>
+    </view>
+  <view class="under">
+       <text class="time">{{notice3.check_time}}</text>
   </view>
 </view>
 </view>
+

@@ -73,7 +73,10 @@ Page({
         console.log(res)
         if (res.statusCode == 200) {
           that.setData({
-            notice: res.data.array
+            notice1: res.data[0],
+            notice2: res.data[1],
+            notice3: res.data[2],
+
           })
         }
       }      
