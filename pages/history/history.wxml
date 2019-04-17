@@ -5,19 +5,19 @@
 <view class="modalDlg" wx:if="{{showModal}}"> 
    <view class="row">
       <view class="info-input1">检查日期：</view>
-      <view class="info-input1">{{history.checkDate}}</view>
+      <view class="info-input1">{{res.data.check_date}}</view>
     </view>
     <view class="row">
       <view class="info-input1">检查时间：</view>
-      <view class="info-input1">{{history.checkTime}}</view>
+      <view class="info-input1">{{checkTime}}</view>
     </view>
     <view class="row">
       <view class="info-input1">检查地点：</view>
-      <view class="info-input1">{{history.room}}宿舍</view>
+      <view class="info-input1">{{building}}+{{room}}宿舍</view>
     </view>
     <view class="row">
       <view class="info-input1">检查评分：</view>
-      <view class="info-input1">{{history.scores}}</view>
+      <view class="info-input1">{{scores}}</view>
     </view>   
 </view>
 <view class="row">

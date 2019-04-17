@@ -24,13 +24,16 @@ Page({
     
   },
   confirm: function (e) {
+    wx.showLoading({
+      title: '提交中',
+    })
     let _this = this;
     wx.getStorage({
       key: 'token',
       success: res => {
         console.log(this.data)
         wx.request({
-          url: 'http://college.netlab.sunan.me/wechat/index/task',
+          url: 'https://college.netlab.sunan.me/wechat/index/task',
           method: 'POST',
           data: {
             token: res,
@@ -41,15 +44,11 @@ Page({
             rule: e.detail.value.rule
           },
           success: res => {
-            if (res == 0) {
-              wx.showToast({
-                title: '提交成功',
-                icon: 'success',
-                duration: 1500
+            if (res.data == 1) {
+              wx.hideLoading();
+              wx.redirectTo({
+                url: '/pages/main/main',
               })
-              setTimeout(function () {
-                wx.navigateBack({})
-              }, 1500)
             }
           }
         })

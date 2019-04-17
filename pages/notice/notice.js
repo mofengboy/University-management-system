@@ -18,14 +18,34 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.showLoading({
+      title: '信息获取中',
+    })
+    console.log('onLoad')
+    let that = this;
+    wx.request({
+      url: 'https://college.netlab.sunan.me/wechat/index/notice',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          let length = res.data.length;
+          wx.hideLoading();
+          that.setData({
+            notice1: res.data[length - 1],
+            notice2: res.data[length - 2],
+            notice3: res.data[length - 3],
+          })
+        }
+      }
+    })
   },
 
   /**
@@ -63,25 +83,7 @@ Page({
 
   },
   
-  onLoad: function () {
-    console.log('onLoad')
-    let that = this;
-    wx.request({
-          url: 'http://college.netlab.sunan.me/wechat/index/notice',
-          method: 'POST',
-        success: function (res) {
-        console.log(res)
-        if (res.statusCode == 200) {
-          that.setData({
-            notice1: res.data[0],
-            notice2: res.data[1],
-            notice3: res.data[2],
 
-          })
-        }
-      }      
-    })
-  },
   //标签导航
   onChange: function (e) {
     let jumpUrl = "/pages/main/main";

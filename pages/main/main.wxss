@@ -39,6 +39,7 @@ page{
   margin: 30rpx;
   color: #fff;
   line-height: 60rpx;
+  text-align: center
 }
 .view-modal-font-small{
   color: #fff;

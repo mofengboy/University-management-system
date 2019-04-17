@@ -1,4 +1,4 @@
-<!--pages/notice/notice.wxml-->
+          <!--pages/notice/notice.wxml-->
 <view>
 <view>
 <van-tabbar active="1" bind:change="onChange">

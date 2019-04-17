@@ -106,7 +106,13 @@ Page({
     })
     let nowDate = new Date();
     let checkDateYear = nowDate.getFullYear();
-    let checkDate = checkDateYear.toString()+ (nowDate.getMonth()+1)+nowDate.getDate();
+    let month = '';
+    if (nowDate.getMonth()<9){
+      month = '0' + (nowDate.getMonth() + 1).toString();
+    }else{
+      mouth = nowDate.getMonth() + 1
+    }
+    let checkDate = checkDateYear.toString()+ month+nowDate.getDate();
     let checkTime = nowDate.toLocaleTimeString();
     wx.request({
       url: 'https://college.netlab.sunan.me/wechat/index/check',

@@ -12,6 +12,8 @@ Page({
     minDate:'1',
     checkDate:'0',
     checkTime:'0',
+    building:'',
+    room:'阿瑟东',
     scores:'0',
     photoUrl:'0',
     person:'0'
@@ -87,7 +89,11 @@ Page({
         console.log(res)
         if(res.statusCode==200){
         that.setData({
-          history:res.data
+          checkDate:res.data.check_date,
+          checkTime:res.data.check_time,
+          building: res.data.building,
+          room: res.data.room,
+          scores: res.data.scores
         })
         }
       }
@@ -114,8 +120,10 @@ Page({
   },
   bindDateChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
+    let timeData1 = e.detail.value.replace("-", "");
+    let timeData = timeData1.replace("-", "");
     this.setData({
-      date: e.detail.value
+      date: timeData
     })
   },
  
